@@ -4,9 +4,9 @@ This project is my take on the Iron Man MK-85 helmet.
 Note: I am not very good at CAD so some of the files may have issues
 
 ## Planned Features
-- • Motorized opening and closing mechanism controlled by a switch
-- • voice assistant control for hands-free operation
-- • 3D-printed helmet design
+- Motorized opening and closing mechanism controlled by a switch
+- voice assistant control for hands-free operation
+- 3D-printed helmet design
 
 ## Changelog
 
