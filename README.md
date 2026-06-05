@@ -17,6 +17,10 @@ Note: I am not very good at CAD so some of the files may have issues
 - Updated Dome.3mf to include a missing mounting hole 
 (This commit got deleted while trying to remove wrong files from history)
 
+### Commit 3:
+- Created faceplate.3mf for the dome
+- Updated dome.3mf to smooth out some issues
+
 # B.O.M (Bill of Materials)
 
 | Item # | Product | Qty | Price (USD)|
