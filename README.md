@@ -14,9 +14,8 @@ Note: I am not very good at CAD so some of the files may have issues
 - Added 3D files for the outer helmet shell
 
 ### Commit 2:
-- Updated Dome.3mf to include a missing mounting hole
-- Changed the faceplate design by removing thin, fragile edges (Again due to poor CAD skills)
-- Created the Utility.3mf  file with the helmet's open/close hardware
+- Updated Dome.3mf to include a missing mounting hole 
+(This commit got deleted while trying to remove wrong files from history)
 
 # B.O.M (Bill of Materials)
 
