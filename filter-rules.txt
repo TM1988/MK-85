@@ -1,0 +1,8 @@
+# Keep everything in the repository by default
+regex ^.*$
+
+# Completely exclude the entire Helmet 3d Files folder
+invert-regex ^Helmet 3d Files/
+
+# Create an exception to KEEP your specific file
+regex ^Helmet 3d Files/Dome Updated\.3mf$
