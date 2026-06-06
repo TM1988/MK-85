@@ -18,8 +18,12 @@ Note: I am not very good at CAD so some of the files may have issues
 (This commit got deleted while trying to remove wrong files from history)
 
 ### Commit 3:
-- Created faceplate.3mf for the dome
+- Created faceplate.3mf for the faceplate
 - Updated dome.3mf to smooth out some issues
+
+### Commit 4:
+- Created jaw.3mf for the jaw
+- Fixed typo for faceplate commit
 
 # B.O.M (Bill of Materials)
 
