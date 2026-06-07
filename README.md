@@ -25,6 +25,9 @@ Note: I am not very good at CAD so some of the files may have issues
 - Created jaw.3mf for the jaw
 - Fixed typo for faceplate commit
 
+### Commit 5:
+- Created lowerlip.3mf
+
 # B.O.M (Bill of Materials)
 
 | Item # | Product | Qty | Price (USD)|
