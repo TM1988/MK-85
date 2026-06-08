@@ -28,6 +28,9 @@ Note: I am not very good at CAD so some of the files may have issues
 ### Commit 5:
 - Created lowerlip.3mf
 
+### Commit 6:
+- Created Utility.3mf
+
 # B.O.M (Bill of Materials)
 
 | Item # | Product | Qty | Price (USD)|
