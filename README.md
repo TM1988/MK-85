@@ -29,7 +29,8 @@ Note: I am not very good at CAD so some of the files may have issues
 - Created lowerlip.3mf
 
 ### Commit 6:
-- Created Utility.3mf (Kit from https://www.thingiverse.com/thing:4607836 + 2 of my own parts)
+- Created Utility.3mf (Kit from https://www.thingiverse.com/thing:4607836)
+- Created "Eye_Inside.3mf" and "Gold Jaw.3mf"
 
 # B.O.M (Bill of Materials)
 
