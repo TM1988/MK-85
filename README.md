@@ -63,7 +63,11 @@ Note: I am not very good at CAD so some of the files may have issues
 ### To run the simulation:
 - Download VSCode (Unless you already have it)
 - Download the WOKWI Extension and get a license
-- Clone the Repo and Navigate to Code/MK-85 Helmet/dragram.json
+- Download the PlatformIO extension
+- Clone the Repo
+- Open PlatformIO from your sidebar and click "pick a folder", Select the folder "MK-85 Helmet" inside the "Code" folder
+- Click the checkmark at the bottom toolbar to build.
+- Navigate to dragram.json
 - If WOKWI is configured properly it should show a simulation
 - Press the start button and test.
 - Video is available [here](https://drive.google.com/file/d/12uJFzC7YU4sSf6sAD5Qnprwmo6rfiqkf/view)
