@@ -8,7 +8,29 @@ Note: I am not very good at CAD so some of the files may have issues
 - voice assistant control for hands-free operation
 - 3D-printed helmet design
 
+## Pictures
+
+<details>
+<summary>Click to show!</summary>
+
+### Helmet Dome
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Helmet%20Dome.png?raw=true" width="300">
+
+### Faceplate
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Faceplate.png?raw=true" width="300">
+
+### Jaw
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Jaw.png?raw=true" width="300">
+
+### Lower Lip
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Lower%20Lip.png?raw=true" width="300">
+
+</details>
+
 ## Changelog
+
+<details>
+<summary> Click to show! </summary>
 
 ### Commit 1:
 - Added 3D files for the outer helmet shell
@@ -34,6 +56,17 @@ Note: I am not very good at CAD so some of the files may have issues
 
 ### Commit 7:
 - Added "Code" folder containing my WOKWI project testing the code. Code is located inside src/main.cpp.
+
+</details>
+
+## How to run
+### To run the simulation:
+- Download VSCode (Unless you already have it)
+- Download the WOKWI Extension and get a license
+- Clone the Repo and Navigate to Code/MK-85 Helmet/dragram.json
+- If WOKWI is configured properly it should show a simulation
+- Press the start button and test.
+- Video is available [here](https://drive.google.com/file/d/12uJFzC7YU4sSf6sAD5Qnprwmo6rfiqkf/view)
 
 # B.O.M (Bill of Materials)
 
