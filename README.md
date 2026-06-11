@@ -39,15 +39,19 @@ Note: I am not very good at CAD so some of the files may have issues
 
 | Item # | Product | Qty | Price (USD)|
 |---|---|---|---:|
-| 1 | [Flexible Helmet LED Eyes](https://amoz.onl/55l) | 1 |19.06|
-| 2 | [MG90S Servos](https://amoz.onl/55m) | 1 |8.88|
-| 3 | [M to F Breadboard Cables (Assorted)](https://amoz.onl/55n) | 1 |6.98|
-| 4 | [KW12-3 250V 5A limit switch (With NO, NC, Common)](https://amoz.onl/55o) | 1 |5.99|
-| 5 | [10mmx2mm Magnets](https://amoz.onl/55p) | 1 |2.90|
-| 6 | [Wire stripper](https://amoz.onl/55q) | 1 |8.39|
-| 7 | [M3 Screws (Assorted)](https://amoz.onl/55r) | 1 |4.99|
-| 8 | [Arduino Nano](https://amoz.onl/55s) | 1 |11.99|
-| 9 | 3D Printed Helmet + Utility | 1 |--|
+| 1 | [Flexible Helmet LED Eyes](https://amoz.onl/55l) | 1 |13.98 (Business Account)|
+| 2 | [DFROBOT Gravity Voice Recognition Module](https://www.amazon.com/gp/product/B0C5XG3BXW?smid=A2EH5PO307BR7O&psc=1)|1|16.90|
+| 3 | MG90S Servos| 1 |4.93|
+| 4 | M to F Dupont Cables| 1 |3.70|
+| 5 | KW12-3 250V 5A limit switch (With NO, NC, Common) | 1 |2.49|
+| 6 | 10mmx2mm Magnets | 1 |0.33|
+| 7 | Wire stripper | 1 |0.99|
+| 8 | M3 Screws (Assorted)| 1 |4.99|
+| 9 | [Arduino Nano](https://amoz.onl/55s) | 1 |11.99|
+| 10 | 3D Printed Helmet + Utility | 1 |--|
+|11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |4|27.33|
 |Total|----------------------------------------------------------|---|69.18|
 
 Note: Each of these quantites is based on the amazon listings, its more like 1 of the listing.
+
+Note 2: Unlinked parts are ordered from AliExpress for much better pricing, but direct links are can't be provided due to fast-changing deals and inventory.
