@@ -32,6 +32,9 @@ Note: I am not very good at CAD so some of the files may have issues
 - Created Utility.3mf (Kit from https://www.thingiverse.com/thing:4607836)
 - Created "Eye_Inside.3mf" and "Gold Jaw.3mf"
 
+### Commit 7:
+- Added "Code" folder containing my WOKWI project testing the code. Code is located inside src/main.cpp.
+
 # B.O.M (Bill of Materials)
 
 | Item # | Product | Qty | Price (USD)|
