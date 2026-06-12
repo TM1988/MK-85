@@ -3,161 +3,143 @@
 #include <Servo.h>
 #include <DFRobot_DF2301Q.h>
 
-#define WOKWI_SIMULATION true
+// change this to false when running on real hardware
+#define SIM_MODE true
 
-static const uint8_t BUTTON_PIN = 2;
-static const uint8_t LEFT_LED_PIN = 3;
-static const uint8_t RIGHT_LED_PIN = 6;
-static const uint8_t LEFT_SERVO_PIN = 9;
-static const uint8_t RIGHT_SERVO_PIN = 10;
+// -- pin defs --
+#define BTN    2
+#define LED_L  3
+#define LED_R  6
+#define SRV_L  9
+#define SRV_R  10
 
-static const uint8_t OPEN_COMMAND_ID = 5;
-static const uint8_t CLOSE_COMMAND_ID = 6;
+// voice cmd IDs (from DF2301Q command table)
+#define VC_OPEN  5
+#define VC_CLOSE 6
 
-static const int LEFT_OPEN_ANGLE = 18;
-static const int LEFT_CLOSED_ANGLE = 92;
-static const int RIGHT_OPEN_ANGLE = 162;
-static const int RIGHT_CLOSED_ANGLE = 88;
-static const uint8_t STEP_DELAY_MS = 12;
-static const uint8_t STEP_SIZE = 1;
+// these angles took forever to dial in, don't change without re-testing
+#define L_OPN  18
+#define L_CLZ  92
+#define R_OPN  162
+#define R_CLZ  88
 
-DFRobot_DF2301Q_I2C voiceModule(&Wire);
-Servo leftServo;
-Servo rightServo;
+// too fast and the helmet jams, 12ms felt right after testing
+#define SERVO_DLY 12
 
-bool helmetIsOpen = false;
-unsigned long lastButtonPress = 0;
+Servo sL, sR;
+DFRobot_DF2301Q_I2C mic(&Wire);
 
-void moveServoPair(int leftTarget, int rightTarget) {
-  int leftCurrent = leftServo.read();
-  int rightCurrent = rightServo.read();
+bool hlmtOpen = false;
+unsigned long btnDebounce = 0;
 
-  while (leftCurrent != leftTarget || rightCurrent != rightTarget) {
-    if (leftCurrent < leftTarget) {
-      leftCurrent = min(leftCurrent + STEP_SIZE, leftTarget);
-    } else if (leftCurrent > leftTarget) {
-      leftCurrent = max(leftCurrent - STEP_SIZE, leftTarget);
-    }
+// sweeps both servos 1 deg at a time so it doesnt snap
+// could probably speed this up but 12ms works fine
+void runServos(int targL, int targR) {
+  int cL = sL.read();
+  int cR = sR.read();
 
-    if (rightCurrent < rightTarget) {
-      rightCurrent = min(rightCurrent + STEP_SIZE, rightTarget);
-    } else if (rightCurrent > rightTarget) {
-      rightCurrent = max(rightCurrent - STEP_SIZE, rightTarget);
-    }
+  while (cL != targL || cR != targR) {
+    if (cL < targL) cL++;
+    else if (cL > targL) cL--;
 
-    leftServo.write(leftCurrent);
-    rightServo.write(rightCurrent);
-    delay(STEP_DELAY_MS);
+    if (cR < targR) cR++;
+    else if (cR > targR) cR--;
+
+    sL.write(cL);
+    sR.write(cR);
+    delay(SERVO_DLY);
   }
 }
 
-void openHelmet() {
-  if (helmetIsOpen) {
-    return;
-  }
-  
-  digitalWrite(LEFT_LED_PIN, LOW);
-  digitalWrite(RIGHT_LED_PIN, LOW);
-
-  moveServoPair(LEFT_OPEN_ANGLE, RIGHT_OPEN_ANGLE);
-  helmetIsOpen = true;
+void doOpen() {
+  if (hlmtOpen) return;
+  digitalWrite(LED_L, LOW);
+  digitalWrite(LED_R, LOW);
+  runServos(L_OPN, R_OPN);
+  hlmtOpen = true;
 }
 
-void closeHelmet() {
-  if (!helmetIsOpen) {
-    return;
-  }
-
-  moveServoPair(LEFT_CLOSED_ANGLE, RIGHT_CLOSED_ANGLE);
-  
-  digitalWrite(LEFT_LED_PIN, HIGH);
-  digitalWrite(RIGHT_LED_PIN, HIGH);
-  
-  helmetIsOpen = false;
+void doClose() {
+  if (!hlmtOpen) return;
+  runServos(L_CLZ, R_CLZ);
+  // LEDs back on once closed
+  digitalWrite(LED_L, HIGH);
+  digitalWrite(LED_R, HIGH);
+  hlmtOpen = false;
 }
 
-void handleVoiceCommand(uint8_t commandId) {
-  switch (commandId) {
-    case OPEN_COMMAND_ID:
-      Serial.println(F("Voice command: open helmet"));
-      openHelmet();
-      break;
-    case CLOSE_COMMAND_ID:
-      Serial.println(F("Voice command: close helmet"));
-      closeHelmet();
-      break;
-    default:
-      break;
+// called from both button and voice paths
+void execCmd(uint8_t id) {
+  if (id == VC_OPEN) {
+    Serial.println("cmd: open");
+    doOpen();
+  } else if (id == VC_CLOSE) {
+    Serial.println("cmd: close");
+    doClose();
   }
+  // anything else just gets ignored
 }
 
 void setup() {
   Serial.begin(115200);
   Wire.begin();
 
-  pinMode(BUTTON_PIN, INPUT_PULLUP);
-  pinMode(LEFT_LED_PIN, OUTPUT);
-  pinMode(RIGHT_LED_PIN, OUTPUT);
+  pinMode(BTN, INPUT_PULLUP);
+  pinMode(LED_L, OUTPUT);
+  pinMode(LED_R, OUTPUT);
 
-  leftServo.attach(LEFT_SERVO_PIN);
-  rightServo.attach(RIGHT_SERVO_PIN);
-  
-  leftServo.write(LEFT_CLOSED_ANGLE);
-  rightServo.write(RIGHT_CLOSED_ANGLE);
-  digitalWrite(LEFT_LED_PIN, HIGH);
-  digitalWrite(RIGHT_LED_PIN, HIGH);
-  helmetIsOpen = false;
+  sL.attach(SRV_L);
+  sR.attach(SRV_R);
 
-  Serial.println(F("Starting voice module..."));
+  // boot into closed state
+  sL.write(L_CLZ);
+  sR.write(R_CLZ);
+  digitalWrite(LED_L, HIGH);
+  digitalWrite(LED_R, HIGH);
+  hlmtOpen = false;
 
-  #if WOKWI_SIMULATION
-    Serial.println(F("Use the green button to open/close the helmet."));
-    Serial.println(F("Or, click the Terminal and type '5' (To Open) or '6' (TO Close)."));
-  #else
-    while (!voiceModule.begin()) {
-      Serial.println(F("Voice module not found. Check I2C wiring or power."));
-      delay(2000);
+#if SIM_MODE
+  Serial.println("wokwi sim - btn or type 5/6 in terminal");
+#else
+  Serial.println("init mic...");
+  int tries = 0;
+  while (!mic.begin()) {
+    tries++;
+    Serial.print("mic not found, attempt ");
+    Serial.println(tries);
+    delay(2000);
+    if (tries > 5) {
+      Serial.println("giving up on mic, continuing without voice");
+      break;
     }
-
-    voiceModule.setVolume(5);
-    voiceModule.setMuteMode(0);
-    voiceModule.setWakeTime(20);
-
-    Serial.println(F("Controller ready."));
-    Serial.println(F("Say command ID 5 to open helmet and 6 to close."));
-  #endif
+  }
+  mic.setVolume(5);
+  mic.setMuteMode(0);
+  mic.setWakeTime(20);
+  Serial.println("ready");
+#endif
 }
 
 void loop() {
-  if (digitalRead(BUTTON_PIN) == LOW) {
-    if (millis() - lastButtonPress > 350) { 
-      lastButtonPress = millis();
-      Serial.println(F("DEBUG: Button pressed"));
-      if (helmetIsOpen) {
-        closeHelmet();
-      } else {
-        openHelmet();
-      }
-    }
+  bool btnHeld = digitalRead(BTN) == LOW;
+  if (btnHeld && millis() - btnDebounce > 350) {
+    btnDebounce = millis();
+    hlmtOpen ? doClose() : doOpen();
   }
 
-  uint8_t commandId = 0;
+  uint8_t incoming = 0;
 
-  #if WOKWI_SIMULATION
-    if (Serial.available() > 0) {
-      char incoming = Serial.read();
-      if (incoming == '5') commandId = OPEN_COMMAND_ID;
-      if (incoming == '6') commandId = CLOSE_COMMAND_ID;
-    }
-  #else
-    commandId = voiceModule.getCMDID();
-  #endif
-
-  if (commandId != 0) {
-    Serial.print(F("Recognized command ID: "));
-    Serial.println(commandId);
-    handleVoiceCommand(commandId);
+#if SIM_MODE
+  if (Serial.available()) {
+    char ch = Serial.read();
+    if (ch == '5') incoming = VC_OPEN;
+    else if (ch == '6') incoming = VC_CLOSE;
   }
-  
+#else
+  incoming = mic.getCMDID();
+#endif
+
+  if (incoming) execCmd(incoming);
+
   delay(10);
 }
