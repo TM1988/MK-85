@@ -79,6 +79,15 @@ Note: I am not very good at CAD so some of the files may have issues
 8. Glue the piece from the Gold Jaw file onto the front face of the lower lip.
 9. Following the included wiring diagram, install the remaining electronics and fasten them in available spaces. Placement may vary depending on your head size variant.
 
+#### Large Casing:
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Large%20Casing.png?raw=true" width="300">
+
+#### Circular Parts:
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Circular%20Parts.png?raw=true" width="300">
+
+#### Helper Arms:
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Helper%20Arms.png?raw=true" width="300">
+
 ### To run the simulation:
 - Download VSCode (Unless you already have it)
 - Download the WOKWI Extension and get a license
