@@ -42,6 +42,13 @@
       "top": 111.8,
       "left": 240,
       "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-ds1307",
+      "id": "voice_module",
+      "top": -220,
+      "left": 150,
+      "attrs": {}
     }
   ],
   "connections": [
@@ -58,7 +65,11 @@
     [ "nano:2", "btn1:2.r", "blue", [ "v-19.2", "h124.8" ] ],
     [ "nano:3", "led1:A", "green", [ "v-19.2", "h-172.8", "v-9.6" ] ],
     [ "nano:6", "led2:A", "green", [ "v-9.6", "h-172.8" ] ],
-    [ "led1:C", "r2:1", "#8f4814", [ "v0" ] ]
+    [ "led1:C", "r2:1", "#8f4814", [ "v0" ] ],
+    [ "voice_module:GND", "nano:GND.2", "black", [ "v0" ] ],
+    [ "voice_module:5V", "nano:5V", "red", [ "v0" ] ],
+    [ "voice_module:SDA", "nano:A4", "green", [ "v0" ] ],
+    [ "voice_module:SCL", "nano:A5", "blue", [ "v0" ] ]
   ],
   "dependencies": {}
 }

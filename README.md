@@ -13,6 +13,9 @@ Note: I am not very good at CAD so some of the files may have issues
 <details>
 <summary>Click to show!</summary>
 
+### Wiring Diagram
+<img src="https://github.com/TM1988/MK-85/blob/master/Images/Wiring%20Diagram.png?raw=true" width="500">
+
 ### Helmet Dome
 <img src="https://github.com/TM1988/MK-85/blob/master/Images/Helmet%20Dome.png?raw=true" width="300">
 
@@ -57,9 +60,25 @@ Note: I am not very good at CAD so some of the files may have issues
 ### Commit 7:
 - Added "Code" folder containing my WOKWI project testing the code. Code is located inside src/main.cpp.
 
+### Commit 8:
+- Added Wiring Diagram to Pictures
+- Added Assembly Instructions
+
 </details>
 
-## How to run
+## How to use
+
+### Assembly Instructions
+1. Press and glue 10x2mm magnets into the indents on both sides of the dome.
+2. Repeat for the lower jaw. Make sure the jaw magnets attract the dome magnets.
+3. Attach the lower jaw to the dome by aligning the magnets.
+4. Glue the lower lip onto the top edge of the lower jaw.
+5. Install the servos into the widow's peak area of the dome using the large casing from the Utility.3mf file.
+6. Glue the small circular parts into the indents on the inside of the dome, then repeat for the corresponding indents on the faceplate.
+7. Position the helper arms onto the installed circular parts and secure with M3 bolts.
+8. Glue the piece from the Gold Jaw file onto the front face of the lower lip.
+9. Following the included wiring diagram, install the remaining electronics and fasten them in available spaces. Placement may vary depending on your head size variant.
+
 ### To run the simulation:
 - Download VSCode (Unless you already have it)
 - Download the WOKWI Extension and get a license
@@ -77,17 +96,17 @@ Note: I am not very good at CAD so some of the files may have issues
 | Item # | Product | Qty | Price (USD)|
 |---|---|---|---:|
 | 1 | [Flexible Helmet LED Eyes](https://amoz.onl/55l) | 1 |13.98 (Business Account)|
-| 2 | [DFROBOT Gravity Voice Recognition Module](https://www.amazon.com/gp/product/B0C5XG3BXW?smid=A2EH5PO307BR7O&psc=1)|1|16.90|
-| 3 | MG90S Servos| 1 |4.93|
-| 4 | M to F Dupont Cables| 1 |3.70|
+| 2 | [DFROBOT Gravity Voice Recognition Module](https://www.amazon.com/gp/product/B0C5XG3BXW?smid=A2EH5PO307BR7O&psc=1)|1|16.40|
+| 3 | MG90S Servos| 2 |6.8|
+| 4 | M to F Dupont Cables| 1 |3.75|
 | 5 | KW12-3 250V 5A limit switch (With NO, NC, Common) | 1 |2.49|
-| 6 | 10mmx2mm Magnets | 1 |0.33|
-| 7 | Wire stripper | 1 |0.99|
+| 6 | 10mmx2mm Magnets | 1 |1.73|
+| 7 | Sand Paper (Assorted) | 1 |0|
 | 8 | M3 Screws (Assorted)| 1 |4.99|
-| 9 | [Arduino Nano](https://amoz.onl/55s) | 1 |11.99|
+| 9 | Arduino Nano | 1 |0.99|
 | 10 | 3D Printed Helmet + Utility | 1 |--|
-|11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |4|27.33|
-|Total|----------------------------------------------------------|---|69.18|
+|11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |3|19.74|
+|12|Hot Glue Gun|1|8.53|
 
 Note: Each of these quantites is based on the amazon listings, its more like 1 of the listing.
 
