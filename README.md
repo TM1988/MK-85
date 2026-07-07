@@ -117,7 +117,9 @@ Note: I am not very good at CAD, so some of the files may have issues
 |11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |3|19.74|
 |12|Hot Glue Gun|1|8.53|
 |13|ScrewDriver Set|1|3.45|
-*I removed the gold spray paint and wire cutters because I can get them for free, as I have Amazon Credit to use!
+|14|Wire Stripper + Gold Paint|1 ea|1.30 (Total)|
+
+For Number 14, I have Amazon credit on stuff sold and shipped by them. So now it's just the tax. Also, the BOM does not account for Tax on parts.
 
 Note: Each of these quantities is based on the Amazon listings; it's more like 1 of the listing.
 
