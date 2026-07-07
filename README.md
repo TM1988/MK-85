@@ -1,11 +1,11 @@
 # MK-85 Iron Man Helmet
 
 This project is my take on the Iron Man MK-85 helmet.
-Note: I am not very good at CAD so some of the files may have issues
+Note: I am not very good at CAD, so some of the files may have issues
 
 ## Planned Features
 - Motorized opening and closing mechanism controlled by a switch
-- voice assistant control for hands-free operation
+- Voice assistant control for hands-free operation
 - 3D-printed helmet design
 
 ## Pictures
@@ -48,7 +48,7 @@ Note: I am not very good at CAD so some of the files may have issues
 
 ### Commit 4:
 - Created jaw.3mf for the jaw
-- Fixed typo for faceplate commit
+- Fixed typo in the faceplate commit
 
 ### Commit 5:
 - Created lowerlip.3mf
@@ -93,16 +93,16 @@ Note: I am not very good at CAD so some of the files may have issues
 - Download the WOKWI Extension and get a license
 - Download the PlatformIO extension
 - Clone the Repo
-- Open PlatformIO from your sidebar and click "pick a folder", Select the folder "MK-85 Helmet" inside the "Code" folder
+- Open PlatformIO from your sidebar and click "Pick a folder". Select the folder "MK-85 Helmet" inside the "Code" folder
 - Click the checkmark at the bottom toolbar to build.
 - Navigate to dragram.json
-- If WOKWI is configured properly it should show a simulation
+- If WOKWI is configured properly, it should show a simulation
 - Press the start button and test.
 - Video is available [here](https://drive.google.com/file/d/12uJFzC7YU4sSf6sAD5Qnprwmo6rfiqkf/view)
 
 # B.O.M (Bill of Materials)
 
-| Item # | Product | Qty | Price (USD)|
+| Item # | Product | Qty | Total Price (USD)|
 |---|---|---|---:|
 | 1 | [Flexible Helmet LED Eyes](https://amoz.onl/55l) | 1 |13.98 (Business Account)|
 | 2 | [DFROBOT Gravity Voice Recognition Module](https://www.amazon.com/gp/product/B0C5XG3BXW?smid=A2EH5PO307BR7O&psc=1)|1|16.40|
@@ -111,12 +111,14 @@ Note: I am not very good at CAD so some of the files may have issues
 | 5 | KW12-3 250V 5A limit switch (With NO, NC, Common) | 1 |2.49|
 | 6 | 10mmx2mm Magnets | 1 |1.73|
 | 7 | Sand Paper (Assorted) | 1 |0|
-| 8 | M3 Screws (Assorted)| 1 |4.99|
+| 8 | M3 Screws (Assorted)| 1 |2.89|
 | 9 | Arduino Nano | 1 |0.99|
 | 10 | 3D Printed Helmet + Utility | 1 |--|
 |11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |3|19.74|
 |12|Hot Glue Gun|1|8.53|
+|13|ScrewDriver Set|1|3.45|
+*I removed the gold spray paint and wire cutters because I can get them for free, as I have Amazon Credit to use!
 
-Note: Each of these quantites is based on the amazon listings, its more like 1 of the listing.
+Note: Each of these quantities is based on the Amazon listings; it's more like 1 of the listing.
 
-Note 2: Unlinked parts are ordered from AliExpress for much better pricing, but direct links are can't be provided due to fast-changing deals and inventory.
+Note 2: Unlinked parts are ordered from AliExpress for much better pricing, but direct links can't be provided due to fast-changing deals and inventory.
