@@ -106,18 +106,18 @@ Note: I am not very good at CAD, so some of the files may have issues
 |---|---|---|---:|
 | 1 | [Flexible Helmet LED Eyes](https://amoz.onl/55l) | 1 |13.98 (Business Account)|
 | 2 | [DFROBOT Gravity Voice Recognition Module](https://www.amazon.com/gp/product/B0C5XG3BXW?smid=A2EH5PO307BR7O&psc=1)|1|16.40|
-| 3 | MG90S Servos| 2 |6.80|
-| 4 | M to F Dupont Cables| 1 |0.00|
-| 5 | KW12-3 250V 5A limit switch (With NO, NC, Common) | 1 |2.49|
-| 6 | 10mmx2mm Magnets | 1 |4.55|
+| 3 | MG90S Servos| 2 |6.14|
+| 4 | M to F Dupont Cables| 1 |2.96|
+| 5 | KW12-3 250V 5A limit switch (With NO, NC, Common) | 1 |2.91|
+| 6 | 10mmx2mm Magnets | 1 |0.00|
 | 7 | Sand Paper (Assorted) | 1 |0.33|
-| 8 | M3 Screws (Assorted)| 1 |3.60|
+| 8 | M3 Screws (Assorted)| 1 |5.39|
 | 9 | Arduino Nano | 1 |0.99|
 | 10 | 3D Printed Helmet + Utility | 1 |--|
-|11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |3|19.74|
-|12|Hot Glue Gun|1|6.33|
-|13|ScrewDriver Set|1|0.00|
-|14|Wire Stripper + Gold Paint|1 ea|0.07 (Total)|
+|11|[Spray Paint + Primer](https://docs.google.com/document/d/1boXkLBG06-nQ8r04DcoNFZOWzf_QpciWl75cyl6Dty0/edit?usp=sharing) |3|23.32|
+|12|Hot Glue Gun|1|4.33|
+|13|Wire Stripper + Red Paint|1 ea|0.30 (Total)|
+|14|Tax/Fees|1|4.78|
 
 For Number 14, I have Amazon credit on stuff sold and shipped by them. So now it's just the tax. Also, tax isn't applied here
 
